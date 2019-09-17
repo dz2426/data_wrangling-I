@@ -13,9 +13,10 @@ library(tidyverse)
 
 ## load in a dataset
 
-```{r}
-## reads in a dataset
-
-
+```{r read_dataset}
+litters_data = read_csv(file = "./data/FAS_litters.csv")  #1st step: read in dataset
+litters_data = janitor::clean_names(litters_data)    #2nd step: clearn column titles
+pups_data = read_csv(file = "./data/FAS_pups.csv")
+pups_data = janitor::clean_names(pups_data)
 ```
 
