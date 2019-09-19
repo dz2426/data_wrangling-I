@@ -1,7 +1,7 @@
 ---
-title: "data wrangling I"
+title: "data manipulation"
 author: "Duzhi Zhao"
-date: "9/17/2019"
+date: "9/19/2019"
 output: github_document
 ---
 
@@ -15,6 +15,8 @@ library(readxl)
 ## load in a dataset
 
 ```{r read_dataset}
+#read_csv is in readr package, but it is also in tidyverse
+
 litters_data = read_csv(file = "./data/FAS_litters.csv")  #1st step: read in dataset
 litters_data = janitor::clean_names(litters_data)    #2nd step: clearn column titles
 pups_data = read_csv(file = "./data/FAS_pups.csv")
